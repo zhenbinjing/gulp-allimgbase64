@@ -1,7 +1,7 @@
 ﻿# gulp-allimgbase64
 
-将 html 文件中的 img 元素 src 属性引用的图片转换为 base64 编码的 Data Url 格式，减少网页加载过程中 http 请求的次数
-图片格式支持有 jpg gif svg png webp
+将 html 文件中的 img 元素 src 属性引用的图片转换为 base64 编码的 Data Url 格式，
+减少网页加载过程中 http 请求的次数图片格式支持有 jpg gif svg png webp
 
 ## Install
 
@@ -69,7 +69,7 @@ gulp.task('img64', function() {
     return gulp.src('./html/*.html')
         .pipe(img64({
             limit: '7kb',
-			deleteAfterEncoding:true //编译后删除文件；
+	    deleteAfterEncoding:true //编译后删除文件；
         }))
         .pipe(gulp.dest('./'));
 });
