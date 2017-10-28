@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 const fs = require('fs');
 const path = require('path');
 const gutil = require('gulp-util');
@@ -159,7 +159,6 @@ function path_regular(content, limit, html){
     return '';
   if(content.lastIndexOf('.png') == content.length - 4
     || content.lastIndexOf('.jpg') == content.length -4
-	|| content.lastIndexOf('.svg') == content.length -4
     || content.lastIndexOf('.webp') == content.length -5
     || content.lastIndexOf('.gif') == content.length - 4
     )
@@ -187,8 +186,6 @@ var transBase64 = function (file){
     suffix = 'png';
   else if(file.lastIndexOf('.jpg') == LEN - 4)
     suffix = 'jpg';
-   else if(file.lastIndexOf('.svg') == LEN - 4)
-    suffix = 'svg+xml';
   else if(file.lastIndexOf('.gif') == LEN - 4)
     suffix = 'gif';
   else suffix = 'webp';
